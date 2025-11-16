@@ -1,53 +1,25 @@
-# Sistema-Cadastro-Universidade
+# Sistema de Cadastro Universitário  
+Projeto Integrador – Segunda Entrega
 
-# Projeto Integrador – Sistema Orientado a Objetos
-## Segunda Entrega – Protótipos + Repositório GitHub
-
-### 👥 Integrantes do Grupo
-- Samuel David Paz Ferreira
-- Emily de Oliveira Ramos
-- Anna Leticia da Silva
-- Thamires Silva Raposo
-- Ana Milena Queiroz Silva
-- Pedro dos Santos Júnior
-
-### 📝 Descrição do Projeto
-Sistema desenvolvido para gerenciar cadastros de:
-- Pessoa Física  
-- Pessoa Jurídica  
-- Alunos  
-- Professores  
-- Fornecedores  
-
-Este repositório contém:
-- Protótipos da Fase 2  
-- Diagramas da Fase 1 (em Markdown)
+Este repositório contém os **protótipos da Fase 2** e os **diagramas da Fase 1**, conforme solicitado no enunciado da segunda entrega do Projeto Integrador.
 
 ---
 
-## 📁 Protótipos da Fase 2
-
+## 👥 Integrantes do Grupo
+- Samuel David Paz Ferreira  
+- Emily de Oliveira Ramos  
+- Anna Leticia da Silva  
+- Thamires Silva Raposo  
+- Ana Milena Queiroz Silva  
+- Pedro dos Santos Júnior  
 
 ---
 
-## 📂 Diagramas da Fase 1
-Arquivo localizado em:  
-`diagramas-fase1/casos-de-uso.md`
+Este arquivo contém todos os atores, fluxos principais, fluxos alternativos e relações entre os casos de uso da etapa 1.
 
 ---
-
-## 🗂 Estrutura Recomendada
-Sistema-Cadastro-Universidade/
-│
-├── README.md
-├── diagramas-fase1/
-│ └── casos-de-uso.md
-└── prototipos-fase2/
-├── pessoa-fisica.png
-├── pessoa-juridica.png
-├── professores.png
-├── fornecedores.png
-└── alunos.png
+📄 **Arquivo com os casos de uso:**  
+[📄 Acessar Casos de Uso (Fase 1)](diagramas-fase1/casos-de-uso.md)
 
 
 
