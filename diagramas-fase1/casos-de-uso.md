@@ -1,5 +1,4 @@
-<img width="1342" height="826" alt="diagrama" src="https://github.com/user-attachments/assets/cf3aa10c-4ff8-47cc-93a1-3db1917fc40f" />
-
+ <img width="1303" height="738" alt="casodeuso" src="https://github.com/user-attachments/assets/67cab361-5f3f-4a5a-b0a9-c85b28e06d7c" />
 # Casos de Uso – Fase 1
 
 Este documento reúne os casos de uso modelados na primeira etapa do Projeto Integrador.
@@ -115,5 +114,4 @@ Este documento reúne os casos de uso modelados na primeira etapa do Projeto Int
 2. Sistema valida dígitos verificadores  
 3. Sistema retorna se é válido ou inválido
 
-4. <img width="1303" height="738" alt="casodeuso" src="https://github.com/user-attachments/assets/67cab361-5f3f-4a5a-b0a9-c85b28e06d7c" />
-
+<img width="1342" height="826" alt="diagrama" src="https://github.com/user-attachments/assets/cf3aa10c-4ff8-47cc-93a1-3db1917fc40f" />
