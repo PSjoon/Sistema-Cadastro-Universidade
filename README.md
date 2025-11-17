@@ -158,12 +158,68 @@ Abaixo, um exemplo de como os casos de uso podem ser descritos também diretamen
   - Ator(es): Compras, Administrador
   - Ações: cadastrar, editar, inativar, consultar
 
-```mermaid
 flowchart LR
-    Secretaria -->|cadastra| Aluno
-    RH -->|cadastra| Professor
-    Compras -->|cadastra| Fornecedor
-    Administrador -->|mantém| Aluno
-    Administrador -->|mantém| Professor
-    Administrador -->|mantém| Fornecedor
-```
+    %% ===========================================
+    %% Gestão de Cadastros — Universidade (Caso de Uso)
+    %% ===========================================
+
+    %% ---------- Atores ----------
+    C[Compras]
+    B[Administrador]
+    S[Secretaria Acadêmica]
+    R[RH]
+    UA[Usuário Autenticado]
+
+    %% Generalização dos perfis para Usuário Autenticado
+    C -->|generalização| UA
+    B -->|generalização| UA
+    S -->|generalização| UA
+    R -->|generalização| UA
+
+    %% ---------- Casos de uso principais ----------
+    UC_Fornecedores((Manter Fornecedores))
+    UC_Alunos((Manter Alunos))
+    UC_Professores((Manter Professores))
+    UC_Login((Autenticar-se))
+
+    %% ---------- Casos de uso genéricos ----------
+    UC_PJ((Manter Pessoa Jurídica<br/>(Criar/Editar/Consultar/Inativar)))
+    UC_PF((Manter Pessoa Física<br/>(Criar/Editar/Consultar/Inativar)))
+    UC_Endereco((Manter Endereço e Contatos))
+    UC_Docs((Anexar/Validar Documentos))
+    UC_ValidarCNPJ((Validar CNPJ))
+    UC_ValidarCPF((Validar CPF))
+
+    %% ---------- Ligações Atores x Casos de Uso ----------
+    %% Autenticação
+    R --> UC_Login
+    UA --> UC_Fornecedores
+    UA --> UC_Alunos
+    UA --> UC_Professores
+
+    %% Perfis em relação aos casos de uso
+    C --> UC_Fornecedores
+    B --> UC_Fornecedores
+
+    B --> UC_Alunos
+    S --> UC_Alunos
+
+    B --> UC_Professores
+    S --> UC_Professores
+    R --> UC_Professores
+
+    %% ---------- Relações «extend» ----------
+    UC_Fornecedores -. «extend» .-> UC_PJ
+    UC_Alunos -. «extend» .-> UC_PF
+    UC_Professores -. «extend» .-> UC_PF
+
+    %% ---------- Relações «include» Pessoa Jurídica ----------
+    UC_PJ -. «include» .-> UC_ValidarCNPJ
+    UC_PJ -. «include» .-> UC_Endereco
+    UC_PJ -. «include» .-> UC_Docs
+
+    %% ---------- Relações «include» Pessoa Física ----------
+    UC_PF -. «include» .-> UC_ValidarCPF
+    UC_PF -. «include» .-> UC_Endereco
+    UC_PF -. «include» .-> UC_Docs
+
